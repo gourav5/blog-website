@@ -39,3 +39,14 @@ for (let i = 0; i < themeBtn.length; i++) {
   })
 
 }
+
+// contribute code 
+
+const form = document.querySelector('.newsletter form');
+form.addEventListener('submit', (e) => {
+  const email = form.querySelector('input[name="email"]').value;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    e.preventDefault();
+    alert('Please enter a valid email address.');
+  }
+});
